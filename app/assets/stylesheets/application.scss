@@ -18,9 +18,6 @@
  // @import "bootstrap";
  @import "materialize";
 
- body {
-   background-color: #1C1C1C;
- }
 
  .card.horizontal {
    height: 100%;
@@ -92,6 +89,13 @@
   background-color: #0f2937;
   color: white;
   padding: 15px;
+  & > p {
+
+
+    & > span {
+      color: #27CFC3;
+    }
+  }
 }
 
 .show-title-span {
@@ -100,8 +104,16 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 3em;
-  color: #34a853;
+  color: #27CFC3;
   font-weight: 800;
+}
+
+.pad-the-button {
+  margin: 15px;
+}
+
+.top-it {
+  padding-top: 20px;
 }
 
 

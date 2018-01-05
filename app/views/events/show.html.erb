@@ -7,24 +7,21 @@
         <span class="show-title-span"><%= @event.title %></span>
       </div>
       <div class="col-md-4" id="show-info">
-        <p>Date: <%= @event.date %></p>
-        <p>Time: 12:00am </p>
-        <p>Description: <%= @event.description %></p>
-        <p>Location: <%= @event.location %>
-        <p>Attendees: dynamic</p>
-        <button class></button>
-        Are you going?
+        <p><span>Date:</span> <%= @event.date %></p>
+        <p><span>Time:</span> 6:00pm </p>
+        <p><span>Description:</span> <br> <%= @event.description %></p>
+        <p><span>Location:</span> <%= @event.location %></p>
+        <p><span>Attendees:</span> dynamic</p>
+        Are you going? <br>
+        <button class="btn btn-primary contact-btn pad-the-button">Yes</button>
+        <button class="btn btn-primary contact-btn">no</button>
       </div>
 
-      <div class="col-md-5" id="map">
+      <div class="col-md-5 top-it" id="map">
         <img class="event-map" src="<%= "https://maps.googleapis.com/maps/api/staticmap?center=" + @location + "&zoom=13&scale=1&size=600x400&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:0xff0000%7Clabel:1%7C" + @location %>">
       </div>
-      <div class="col-md-7" id="guest-form">
-        if your a signed in user
-          nothing you dont need a form, may want to find filler for this so its not empty with a user
+      <div class="col-md-7 top-it" id="guest-form">
 
-        if your not signed in
-          form for guest
         <form action="#" method="post">
           <div class="form-group">
             <input placeholder="Name" rows="15" class="form-control" id="contact-body"></input>
@@ -33,7 +30,7 @@
             <input type="email" placeholder="Email" class="form-control"></input>
           </div>
           <div class="form-group contact-btn-wrapper">
-            <button type="submit" class="btn btn-primary contact-btn">Send</button>
+            <button type="submit" class="btn btn-primary contact-btn pad-the-button">RSVP</button>
           </div>
         </form>
       </div>
